@@ -38,8 +38,14 @@ export class GifsService {
 
     // limito el arreglo a 10 elementos
     this._tagsHistory = this.tagsHistory.splice(0,10);
+
+    this.saveLocalStorage();
   }
 
+  // Guarda mi historial de busquedas
+  private saveLocalStorage(): void {
+    localStorage.setItem('history', JSON.stringify(this._tagsHistory))
+  }
   // Almacena la busqueda
   searchTag(tag: string): void {
     if (tag.length === 0) return;
