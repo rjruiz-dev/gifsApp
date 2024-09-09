@@ -23,7 +23,7 @@ export class SearchBoxComponent {
   // Recibe el newTag a buscar
   searchTag(){
     const newTag = this.tagInput.nativeElement.value;
-    console.log({ newTag });
+    // console.log({ newTag });
     
     // Consume el metodo searchTag de gifsService
     this.gifsService.searchTag(newTag);

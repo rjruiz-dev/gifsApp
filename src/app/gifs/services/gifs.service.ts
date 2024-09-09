@@ -46,7 +46,7 @@ export class GifsService {
 
     this.organizeHistory(tag);   
     
-    console.log(this._tagsHistory);
+    // console.log(this._tagsHistory);
 
     const params = new HttpParams()
       .set('api_key', this.apiKey)
